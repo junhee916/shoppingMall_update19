@@ -18,6 +18,8 @@ app.use(bodyParser.urlencoded({extended : false}))
 app.use(cors())
 app.use(morgan("dev"))
 
+app.use('/uploads', express.static('uploads'))
+
 app.use('/product', productRouter)
 app.use('/order', orderRouter)
 app.use('/user', userRouter)
